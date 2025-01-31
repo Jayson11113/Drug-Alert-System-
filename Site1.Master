@@ -1,0 +1,97 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="DrugAbuseAlertSystem.Site1" %>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Drug Abuse Alert System</title>
+    <!-- fontawesome css -->
+    <link href="fontawesome/css/all.css" rel="stylesheet" />
+    <!-- Bootstrap css -->
+    <link href="BOOTSTRAP/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Custom css -->
+    <link href="BOOTSTRAP/site.css" rel="stylesheet" />
+    <!-- map css -->
+    <link href="map/css/leaflet.css" rel="stylesheet" />
+    <!-- map js -->
+    <script src="map/js/leaflet.js"></script>
+
+    <!-- charts js -->
+    <script src="charts/chart.js"></script>
+    <!-- tables css -->
+    <link href="DataTables/css/dataTables.dataTables.min.css" rel="stylesheet" />
+    <!-- tables js -->
+    <script src="DataTables/js/dataTables.min.js"></script>
+    <style>
+        body {
+            background-color: grey;
+        }
+        
+        .navbar, .footer {
+            background-color: black;
+        }
+        .btn {
+            background-color: blue;
+            color: white;
+        }
+        .btn:hover {
+            background-color: darkblue;
+        }
+    </style>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <!-- Navigation Bar -->
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <div class="container-fluid">
+                    <a class="navbar-brand logo-text" href="/">
+                       <img src="fontawesome/logo/logo.jpg" width="50" height="40"  />
+                        Drug Abuse Alert System
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item">
+                                <a class="btn system-btn-primary mx-1" href="Login.aspx">Login</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="btn system-btn-primary mx-1" href="Sign Up.aspx">Sign Up</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="btn system-btn-primary mx-1" href="Dashboard.aspx">Dashboard</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="btn system-btn-primary mx-1" href="Reports.aspx">Reports</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- Main Content -->
+            <div class="container mt-4">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+
+            <!-- Footer -->
+            <footer class="footer system-footer mt-4">
+                <div class="container text-center py-3">
+                    <span class="footer-text">
+                        &copy; 2024 | Developed by Jaison Rufasi | Drug Abuse Alert System. All Rights Reserved.
+                    </span>
+                </div>
+            </footer>
+        </div>
+    </form>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
